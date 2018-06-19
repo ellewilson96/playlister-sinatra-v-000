@@ -52,6 +52,7 @@ GEM
     public_suffix (3.0.2)
     rack (2.0.5)
     rack-flash3 (1.0.5)
+      rack
     rack-protection (2.0.1)
       rack
     rack-test (1.0.0)
@@ -101,6 +102,7 @@ DEPENDENCIES
   capybara
   database_cleaner!
   pry
+  rack-flash3
   rack-test
   rake
   require_all
@@ -112,4 +114,4 @@ DEPENDENCIES
   thin
 
 BUNDLED WITH
-   1.16.0
+   1.16.2
