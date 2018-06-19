@@ -6,7 +6,7 @@ class SongsController < ApplicationController
   end
 
   get '/songs/new' do
-    erb :'/songs/:slug'
+    erb '/songs/show'
   end
 
   get '/songs/:slug' do
@@ -14,7 +14,7 @@ class SongsController < ApplicationController
     erb :'songs/show'
   end
 
-  post '/songs'do
+  post '/songs' do
   @song = Song.create(:name => params["name"])
   @song.artist = Artist.find_or_create_by(:name => params["artist_name"])
   @song.genre_ids = params[:genres]
