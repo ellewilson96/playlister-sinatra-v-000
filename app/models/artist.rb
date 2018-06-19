@@ -1,4 +1,4 @@
 class Artist
-  has_many: songs
-  has_many: genres
+  has_many :songs
+  has_many :artists
 end
