@@ -19,6 +19,6 @@ class SongsController < ApplicationController
   @song.artist = Artist.find_or_create_by(:name => params["artist_name"])
   @song.genre_ids = params[:genres]
   @song.save
-  erb :'songs/show'
+  erb :'songs/show', locals: {message: "Successfully created song."}
 end
 end
